@@ -1,5 +1,5 @@
 /*
- * Copyright 2013-2022 the original author or authors.
+ * Copyright 2013-2024 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,14 +21,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Annotation that is used to map SNS notification value on an SQS Queue to a variable that is annotated. Used in
- * aontrollers method for handling/receiving SQS notifications.
+ * Annotation that is used to map EventBridge messages value on an SQS Queue to a variable that is annotated. Used in
+ * controllers method for handling/receiving SQS notifications.
  *
- * @author Michael Sosa
- * @since 3.1.1
+ * @author Fredrik Jonsén
+ * @since 3.2.0
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.PARAMETER)
-public @interface SnsNotificationMessage {
-
+public @interface EventBridgeMessage {
 }
